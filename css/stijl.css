@@ -1,0 +1,129 @@
+#wrapper
+{
+width:96%;
+max-width:920px;	
+margin:auto;
+padding:2%;	
+
+font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+#titleApp{
+
+	color:white;
+	font-size: 18px;
+	
+}
+
+#log-out{
+	float:right;
+}
+
+.invoegen{
+	background-color: #8eb461;
+	color:white;
+	border:none;
+	height:50%;
+	width:95%;
+	/*width:89%;*/
+	font-size:100%;
+	/*float:right;
+	*/
+	height:5%;
+	
+	padding-top:4%;
+	padding-bottom: 4%;
+	padding-left:5%;
+	
+	
+}
+
+#registreerIndex{
+float:right;
+	
+	
+}
+.witruimte{
+max-width:100px;height: auto;	
+		
+	
+}
+
+a:link{
+text-decoration: none;
+color:black;
+	
+	
+}
+a:visited{
+text-decoration: none;
+color:black;
+	
+	
+}
+
+
+#logoIndex{
+max-width:96%;height: auto;
+
+}
+
+#btnLogin{
+	background-color: #eb3720;
+	border:none;
+	padding-top:3%;
+	width:100%;
+	padding-bottom:3%;
+	font-size:100%;
+	
+}
+
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+/*Registratie pagina*/
+
+#LogoRegistratie{padding-left:20%;}
+
+
+.invoegenReg{
+	background-color: #8eb461;
+	color:white;
+	border:none;
+	height:50%;
+	width:95%;
+	font-size:100%;
+	padding-top:4%;
+	padding-bottom: 4%;
+	padding-left:5%
+}
+#btnRegistreer
+{
+	background-color: #eb3720;
+	border:none;
+	padding-top:3%;
+	width:100%;
+	padding-bottom:3%;
+	font-size:100%;
+}
+
+#logoRegistratie{
+max-width:96%;height: auto;	
+
+}
+
+.pixel{height:3px;}
