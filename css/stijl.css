@@ -14,10 +14,21 @@ font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	font-size: 18px;
 	
 }
+#titleApp{
+	width:100%;
+	height:100%;
+	background-color: #8eb461;
+	padding-top:3%;
+	padding-bottom:3%;
+}
+
 
 #log-out{
 	float:right;
 }
+
+
+
 
 .invoegen{
 	background-color: #8eb461;
