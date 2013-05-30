@@ -27,11 +27,13 @@ include_once('classes/Connection.php');
 				<nav>
 				</nav>
 			</header>
-			<img src="images/logo.png" alt="logo" id="LogoIndex" />
+			<img src="images/logo.jpg" alt="logo" id="logoIndex" />
 					<div id="contact">
-						<div class="invoegen">Lijst</div>
-						<div class="invoegen">Split</div>
-						<div class="button" id="btnLogin">Reset</div>
+						<a href="lijst.php"><div class="invoegen">Lijst</div></a>
+						<div class='pixel'></div>
+						<a href="split.php"><div class="invoegen">Split</div>
+							<div class='pixel'></div>
+						<a href="reset.php"><div class="button" id="btnLogin">Reset</div>
 						
 				    </div>
 				

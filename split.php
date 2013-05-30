@@ -1,7 +1,6 @@
 <?php
 
 
-include_once('classes/Connection.php');
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -19,11 +18,16 @@ include_once('classes/Connection.php');
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/stijl.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		
+		<script type="text/javascript">
+		
+		</script>
+		
 		
 	</head>
 	<body>
-		<div id="wrapper">
-			<header>
+		<header>
 				<nav>
 					<div id="titleApp">
 				
@@ -32,28 +36,37 @@ include_once('classes/Connection.php');
 				</div>
 				</nav>
 			</header>
+		<div id="wrapper">
+			
 			<div id="contact">
 					<div><?php $feedback ?></div>
-						<form action="" method="post">
+						
 					        <div  id="splitForm">
+					        	<br />
+					        	<br />
 					      		<label>Personen:</label><br />
-					 			<input name="personen" type="number" class="invoegenSplit" autocomplete="off" /><br />	
+					 			<input name="personen" id="val1" type="text" class="invoegenReg" autocomplete="off" placeholder="aantal Personen" /><br />
+					 			<br />
+					 				
 					 			<label>prijs:</label><br />
 					 			
-					       		<input name="aantal" type="number" class="invoegenSplit" autocomplete="off"  /><br />
-					       		
+					       		<input name="aantal" id="val2" type="text" class="invoegenReg" autocomplete="off" placeholder="prijs"   /><br />
+					       		 <br />
+					       		 <p>prijst per persoon:</p>
+					   		<br />
+					   		<input name="aantal" id="total" type="text" class="invoegenReg" autocomplete="off" placeholder="prijs" value="" /><br />
+					   
 					        </div>
-					    </form>
-					   <div>
-					   		<p>prijst per persoon:</p>
-					   	
-					   </div>
+				
+					   
+					  
 				    </div>
 					
 				
 		
 		
 	 </div>
+	<footer id="footer"></footer>	
 		
 	</body>		
 	

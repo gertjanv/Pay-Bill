@@ -1,3 +1,7 @@
+body{
+	background-color: #f5eccb;
+	
+}
 #wrapper
 {
 width:96%;
@@ -5,9 +9,10 @@ max-width:920px;
 margin:auto;
 padding:2%;	
 
-font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
 
+font-family: Helvetica;
+}
+.pixel{height:3px;}
 #titleApp{
 
 	color:white;
@@ -77,15 +82,21 @@ color:black;
 #logoIndex{
 max-width:96%;height: auto;
 
+padding-left:10%;
+padding-top: 50px;
+padding-bottom:60px;
+
 }
 
 #btnLogin{
 	background-color: #eb3720;
 	border:none;
 	padding-top:3%;
-	width:100%;
+	width:95%;
 	padding-bottom:3%;
 	font-size:100%;
+	padding-left:5%;
+	color:white;
 	
 }
 
@@ -112,9 +123,9 @@ max-width:96%;height: auto;
 
 
 .invoegenReg{
-	background-color: #8eb461;
-	color:white;
-	border:none;
+	/*background-color: #8eb461;*/
+	/*color:white;*/
+	/*border:none;*/
 	height:50%;
 	width:95%;
 	font-size:100%;
@@ -138,3 +149,29 @@ max-width:96%;height: auto;
 }
 
 .pixel{height:3px;}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#dddddd;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+#titleApp{
+	width:100%;
+	height:100%;
+	background-color: #8eb461;
+	padding-top:3%;
+	padding-bottom:3%;
+	font-family: Helvetica; 
+}
+
+
+
