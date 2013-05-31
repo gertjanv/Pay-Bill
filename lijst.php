@@ -1,26 +1,5 @@
 <?php
 
-include_once 'classes/persoon.class.php';
-
-//$feedback = "Gelieve u te registeren.";
-if(!empty($_POST['Naam']))
-	{
-		$obj_subscriber = new registreer();
-		$obj_subscriber->Naam = $_POST['Naam'];
-		//$obj_subscriber->Voornaam = $_POST['Voornaam'];
-		//$obj_subscriber->Paswoord = $_POST['Paswoord'];
-		//$obj_subscriber->Email = $_POST['Email'];
-		
-		try
-		{
-			$obj_subscriber->Save();
-			
-		}
-		catch(Exception $e)
-		{
-			$feedback = $e->getMessage();	
-		}	
-	}
 
 
 ?><!DOCTYPE html>
@@ -60,15 +39,9 @@ if(!empty($_POST['Naam']))
 		<div id="wrapper">
 			
 			<div id="contact">
-					<div><?php $feedback ?></div>
-						
-					   <form action="" method="post" id="formpadding">
-			            		
-				        		<label>Persoon</label><br />
-				        		<input name="Naam" type="text" placeholder="Naam" class="invoegenReg" autocomplete="off" /><br />
-				        		<div class='pixel'></div>
-				       			<input id="btnRegistreer" value="Volgende" type="submit" class="button" />
-			        		</form>	  
+					
+					   
+					  
 				    </div>
 					
 				
