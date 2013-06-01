@@ -75,7 +75,15 @@ if(!empty($_POST['Naam']))
 		
 		
 	 </div>
-	<footer id="footer"></footer>	
+	<footer id="footer">
+		<a href="Drankje.php"><img src="images/pint.png" /></a>
+		<a href="Persoon.php"><img src="images/ventje.png" /></a>
+		<a href="Bestelling.php"><img src="images/kaartje.png" /></a>
+		<a href="Tournee.php"><img src="images/tournee.png" /></a>
+		<a href="Wijzig.php"><img src="images/wijzig.png" /></a>
+		
+		
+	</footer>	
 		
 	</body>		
 	
