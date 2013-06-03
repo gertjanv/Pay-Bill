@@ -1,6 +1,6 @@
 <?php
 
-class drankje {
+class tournee {
 
 
 	
@@ -43,18 +43,22 @@ class drankje {
 	public function Save() {
 
 		include_once('classes/Connection.php');
+	
+		$desc="Tournee";
 
-
-		$sql = "INSERT INTO drank
-				(drankje,
-				prijs
+		$sql = "INSERT INTO betaling
+				(naam,
+				prijs,
+				beschrijving
 				) 
 				VALUES 
 				(
 				'" . $link -> real_escape_string($this -> m_sNaam) . "',
-				'" . $link -> real_escape_string($this -> m_sPrijs) . "'
+				'" . $link -> real_escape_string($this -> m_sPrijs) . "',
+				'". $desc ."'			
 				);";
 
+		
 	
 		if (!$link -> query($sql)) {
 			throw new Exception("Fout bij registratie");

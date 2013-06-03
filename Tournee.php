@@ -1,15 +1,14 @@
 <?php
 
-include_once 'classes/drank.class.php';
+include_once 'classes/tournee.class.php';
 
 //$feedback = "Gelieve u te registeren.";
 if(!empty($_POST['Naam']))
 	{
-		$obj_subscriber = new drankje();
+		$obj_subscriber = new tournee();
 		$obj_subscriber->Naam = $_POST['Naam'];
 		$obj_subscriber->Prijs = $_POST['Prijs'];
-		//$obj_subscriber->Paswoord = $_POST['Paswoord'];
-		//$obj_subscriber->Email = $_POST['Email'];
+		
 		
 		try
 		{
@@ -64,13 +63,13 @@ if(!empty($_POST['Naam']))
 						
 					   <form action="" method="post" id="formpadding">
 			            		
-				        		<label>Naam drankje</label><br />
+				        		<label>Naam</label><br />
 				        		<input name="Naam" type="text" placeholder="Naam" class="invoegenReg" autocomplete="off" /><br />
 				        		<div class='pixel'></div>
-				        		<label>Prijs</label><br />
+				        		<label>Prijs Tournee</label><br />
 				        		<input name="Prijs" type="text" placeholder="Prijs" class="invoegenReg" autocomplete="off" /><br />
 				        		<div class='pixel'></div>
-				       			<input id="btnRegistreer" value="Volgende" type="submit" class="button" />
+				       			<input id="btnRegistreer" value="zet er 1" type="submit" class="button" />
 			        		</form>	  
 				    </div>
 					
