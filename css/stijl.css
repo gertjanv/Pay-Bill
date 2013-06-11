@@ -59,6 +59,27 @@ nav{}
 	
 }
 
+.invoegen2{
+	background-color: #eb3720;
+	color:white;
+	border:none;
+	height:50%;
+	width:95%;
+	/*width:89%;*/
+	font-size:100%;
+	/*float:right;
+	*/
+	height:5%;
+	
+	padding-top:4%;
+	padding-bottom: 4%;
+	padding-left:5%;
+	
+	
+}
+
+
+
 #registreerIndex{
 float:right;
 	

@@ -44,7 +44,7 @@ $link -> query($sql3);
 							<div class='pixel'></div>
 						<form method="post">	
 							<input name="submitted" type="hidden" value="reset" />
-							<button class="button" id="btnLogin">Reset</button>
+							<button class="invoegen2" id="btnLogin">Reset</button>
 							
 							<!--<div class="button" id="btnLogin">Reset</div>-->
 						</form>
