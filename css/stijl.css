@@ -4,10 +4,11 @@ body{
 }
 #wrapper
 {
-width:96%;
+width:90%;
 max-width:920px;	
 margin:auto;
-padding:2%;	
+padding:5%;	
+
 
 
 font-family: Helvetica;
@@ -137,6 +138,19 @@ padding-bottom:60px;
 	padding-bottom: 4%;
 	padding-left:5%
 }
+
+.invoegenCombo{
+	/*background-color: #8eb461;*/
+	/*color:white;*/
+	/*border:none;*/
+	height:50%;
+	width:100%;
+	font-size:100%;
+	padding-top:4%;
+	padding-bottom: 4%;
+	padding-left:5%
+}
+
 #btnRegistreer
 {
 	background-color: #eb3720;
@@ -146,6 +160,26 @@ padding-bottom:60px;
 	padding-bottom:3%;
 	font-size:100%;
 }
+.button
+{
+	background-color: #eb3720;
+	border:none;
+	padding-top:3%;
+	width:100%;
+	padding-bottom:3%;
+	font-size:100%;
+}
+
+.button2
+{
+	background-color: #eb3720;
+	border:none;
+	padding-top:3%;
+	width:100%;
+	padding-bottom:3%;
+	font-size:100%;
+}
+
 
 #logoRegistratie{
 max-width:96%;height: auto;	
@@ -179,5 +213,13 @@ max-width:96%;height: auto;
 	font-family: Helvetica; 
 }
 
+nav p{
+	padding-left:5%;	
+}
 
+#log-out{
+	padding-right:5%;
+}
 
+#Prijs{float: right}
+.prijs{float: right}

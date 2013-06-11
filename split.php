@@ -21,6 +21,22 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		
 		<script type="text/javascript">
+		function split() {
+			    var wtStr =document.form.personen.value;
+			    if (!wtStr)
+			        wtStr = '0';
+			    var htStr = document.form.prijs.value;
+			    if (!htStr)
+			        htStr = '0';
+			    var personen = parseFloat(wtStr);
+			    var prijs = parseFloat(htStr);
+			    document.form.kosten.value = personen / prijs;
+			    
+			    if(document.form.kosten.value==Infinity){
+			    	 document.form.kosten.value="";
+			    }
+		}
+		
 		
 		</script>
 		
@@ -32,35 +48,34 @@
 					<div id="titleApp">
 				
 					<a href="index.php"><p id="log-out">back</p></a>
-					<p>split-T-Bill</p>
+					<p>split-T-bill</p>
 				</div>
 				</nav>
 			</header>
 		<div id="wrapper">
+			<br />
+			<br />
 			
-			<div id="contact">
-					<div><?php $feedback ?></div>
-						
-					        <div  id="splitForm">
-					        	<br />
-					        	<br />
-					      		<label>Personen:</label><br />
-					 			<input name="personen" id="val1" type="text" class="invoegenReg" autocomplete="off" placeholder="aantal Personen" /><br />
-					 			<br />
-					 				
-					 			<label>prijs:</label><br />
-					 			
-					       		<input name="aantal" id="val2" type="text" class="invoegenReg" autocomplete="off" placeholder="prijs"   /><br />
-					       		 <br />
-					       		 <p>prijst per persoon:</p>
-					   		<br />
-					   		<input name="aantal" id="total" type="text" class="invoegenReg" autocomplete="off" placeholder="prijs" value="" /><br />
-					   
-					        </div>
+			<form  name="form" id="form">
+				<label>Personen:</label><br />
+				<input type="Text" name="personen" size="4" onkeyup="split()" class="invoegenReg" autocomplete="off" />
+				<br />
+			
+				<br />			 				
+	 			<label>prijs:</label><br />
 				
-					   
-					  
-				    </div>
+				<input type="Text" name="prijs" size="4" onkeyup="split()" class="invoegenReg" autocomplete="off"/>
+				<br />
+				
+				<br />
+				<p>prijs per persoon:</p>
+				
+				<input type="Text" name="kosten" id="kosten" size="4" class="invoegenReg" autocomplete="off">     
+			<!--	<input type="button" style="font-size: 8pt" value="Calculate" onClick="split()" name="button">-->
+			</form>
+			
+				
+				  
 					
 				
 		

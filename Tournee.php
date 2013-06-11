@@ -1,6 +1,22 @@
 <?php
 
 include_once 'classes/tournee.class.php';
+include_once 'classes/dropdown.class.php';
+
+$result = mysql_query("SELECT naam FROM user");	//Resultaten in variabele steken
+
+$combobox="<select class='invoegenCombo' name='Naam'>\n";
+$combobox.="<option value=''>--- Persoon ---</option>\n";
+while($record=mysql_fetch_array($result)){
+	$combobox.="<option value='".$record['naam']."'";	//Geeft het adres mee als waarde
+	
+	$combobox.=">".$record['naam']."</option>\n";	//Vul de namen in
+}
+
+$combobox.="</select>\n";
+
+
+
 
 //$feedback = "Gelieve u te registeren.";
 if(!empty($_POST['Naam']))
@@ -20,9 +36,12 @@ if(!empty($_POST['Naam']))
 			$feedback = $e->getMessage();	
 		}	
 	}
+	
 
+	
 
-?><!DOCTYPE html>
+echo <<< EOPAGE
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -51,24 +70,29 @@ if(!empty($_POST['Naam']))
 				<nav>
 					<div id="titleApp">
 				
-					<a href="index.php"><p id="log-out">back</p></a>
-					<p>split-T-Bill</p>
+					<a href="lijst.php"><p id="log-out">Lijst</p></a>
+					<p>split-T-bill</p>
 				</div>
 				</nav>
 			</header>
 		<div id="wrapper">
 			
 			<div id="contact">
-					<div><?php $feedback ?></div>
+					<br/>
+					<br/>
 						
 					   <form action="" method="post" id="formpadding">
 			            		
 				        		<label>Naam</label><br />
-				        		<input name="Naam" type="text" placeholder="Naam" class="invoegenReg" autocomplete="off" /><br />
+				        		<!--<input name="Naam" type="text" placeholder="Naam" class="invoegenReg" autocomplete="off" /><br /> -->
+				        		$combobox
 				        		<div class='pixel'></div>
+				        		<br />
+				        		
 				        		<label>Prijs Tournee</label><br />
 				        		<input name="Prijs" type="text" placeholder="Prijs" class="invoegenReg" autocomplete="off" /><br />
 				        		<div class='pixel'></div>
+				        		<br />
 				       			<input id="btnRegistreer" value="zet er 1" type="submit" class="button" />
 			        		</form>	  
 				    </div>
@@ -91,3 +115,5 @@ if(!empty($_POST['Naam']))
 	
 	
 </html>
+EOPAGE
+?>

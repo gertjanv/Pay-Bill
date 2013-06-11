@@ -1,14 +1,11 @@
 <?php
-include_once('classes/Connection.php');
 
 if(isset($_POST['submitted'])){
 	include_once 'classes/Connection.php';
 $sql="delete from betaling where x=1";
-$sql2="delete from user where x=1";
-$sql3="delete from drank where x=1";
+
 $link -> query($sql);
-$link -> query($sql2);
-$link -> query($sql3);
+
 };	
 
 
@@ -31,28 +28,40 @@ $link -> query($sql3);
 		
 	</head>
 	<body>
-		<div id="wrapper">
-			<header>
+		<header>
 				<nav>
+					<div id="titleApp">
+				
+					<a href="lijst.php"><p id="log-out">Lijst</p></a>
+					<p>split-T-bill</p>
+				</div>
 				</nav>
 			</header>
-			<img src="images/logo.jpg" alt="logo" id="logoIndex" />
-					<div id="contact">
-						<a href="lijst.php"><div class="invoegen">Lijst</div></a>
-						<div class='pixel'></div>
-						<a href="split.php"><div class="invoegen">Split</div></a>
-							<div class='pixel'></div>
+			<div id="wrapper">
+				<br />
+				<br />
+				<div>
+					Wenst u lijst te wissen?
+					<br />
+					<br />
+				</div>
 						<form method="post">	
 							<input name="submitted" type="hidden" value="reset" />
-							<button class="button" id="btnLogin">Reset</button>
+							<button class="button2" id="btnLogin">Reset</button>
 							
 							<!--<div class="button" id="btnLogin">Reset</div>-->
 						</form>
-				    </div>
+				   
 				
-		
-		
-	 </div>
+			</div>
+		<footer id="footer">
+			<a href="Drankje.php"><img src="images/pint.png" /></a>
+			<a href="Persoon.php"><img src="images/ventje.png" /></a>
+			<a href="Bestelling.php"><img src="images/kaartje.png" /></a>
+			<a href="Tournee.php"><img src="images/tournee.png" /></a>
+			<a href="Wijzig.php"><img src="images/wijzig.png" /></a>
+		</footer>	
+	
 		
 	</body>		
 	

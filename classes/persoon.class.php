@@ -54,6 +54,23 @@ class registreer {
 		}
 
 	}
+
+	public function Wis() {
+
+		include_once('classes/Connection.php');
+
+
+		$sql = "DELETE FROM `user` WHERE `naam` = 
+				
+				'" . $link -> real_escape_string($this -> m_sNaam) . "';";
+
+	
+		if (!$link -> query($sql)) {
+			throw new Exception("Fout bij registratie");
+		}
+
+	}
+	
 	
 }
 ?>

@@ -3,13 +3,13 @@
 include_once 'classes/drank.class.php';
 
 //$feedback = "Gelieve u te registeren.";
-if(!empty($_POST['Naam']))
+if(!empty($_POST['Naam'])){
+if(!empty($_POST['btnReg'])){
+
 	{
 		$obj_subscriber = new drankje();
 		$obj_subscriber->Naam = $_POST['Naam'];
 		$obj_subscriber->Prijs = $_POST['Prijs'];
-		//$obj_subscriber->Paswoord = $_POST['Paswoord'];
-		//$obj_subscriber->Email = $_POST['Email'];
 		
 		try
 		{
@@ -21,6 +21,29 @@ if(!empty($_POST['Naam']))
 			$feedback = $e->getMessage();	
 		}	
 	}
+}
+else if(!empty($_POST['btnWis'])){
+
+	{
+		$obj_subscriber = new drankje();
+		$obj_subscriber->Naam = $_POST['Naam'];
+		$obj_subscriber->Prijs = $_POST['Prijs'];
+		
+		try
+		{
+			$obj_subscriber->Wis();
+			
+		}
+		catch(Exception $e)
+		{
+			$feedback = $e->getMessage();	
+		}	
+	}
+}
+
+}
+
+
 
 
 ?><!DOCTYPE html>
@@ -52,25 +75,36 @@ if(!empty($_POST['Naam']))
 				<nav>
 					<div id="titleApp">
 				
-					<a href="index.php"><p id="log-out">back</p></a>
-					<p>split-T-Bill</p>
+					<a href="lijst.php"><p id="log-out">Lijst</p></a>
+					<p>split-T-bill</p>
 				</div>
 				</nav>
 			</header>
 		<div id="wrapper">
 			
 			<div id="contact">
-					<div><?php $feedback ?></div>
+					<br />
+					<br />
 						
 					   <form action="" method="post" id="formpadding">
 			            		
 				        		<label>Naam drankje</label><br />
 				        		<input name="Naam" type="text" placeholder="Naam" class="invoegenReg" autocomplete="off" /><br />
 				        		<div class='pixel'></div>
+				        		<br />
 				        		<label>Prijs</label><br />
 				        		<input name="Prijs" type="text" placeholder="Prijs" class="invoegenReg" autocomplete="off" /><br />
+				        		
 				        		<div class='pixel'></div>
-				       			<input id="btnRegistreer" value="Volgende" type="submit" class="button" />
+				        		<br />
+				        		<br />
+				       			<input type="submit" id="btnRegistreer" name="btnReg" value="Voeg Drankje Toe" class="button" />
+				       			
+				       			<div class='pixel'></div>
+				       			<input type="submit" id="btnWis" name="btnWis" value="Delete Drankje"  class="button" />
+				
+								
+				        		
 			        		</form>	  
 				    </div>
 					

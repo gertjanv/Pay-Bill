@@ -1,5 +1,27 @@
 <?php
 
+include_once 'classes/bestelling.class.php';
+
+$o = new bestelling;
+$betaal = $o-> ToonBestelling();
+
+
+
+
+
+
+//Wis de lijst
+
+if(isset($_POST['submitted'])){
+	include_once 'classes/Connection.php';
+$sql="delete from betaling where x=1";
+$link -> query($sql);
+
+};
+
+
+
+
 
 
 ?><!DOCTYPE html>
@@ -32,18 +54,34 @@
 					<div id="titleApp">
 				
 					<a href="index.php"><p id="log-out">back</p></a>
-					<p>split-T-Bill</p>
+					<p>split-T-bill</p>
 				</div>
 				</nav>
 			</header>
 		<div id="wrapper">
+			<div id="Prijs"><u>Prijs</u></div><div id="Naam"><u>Naam</u></div>
+			<br />
+		<?php
 			
-			<div id="contact">
-					
-					   
-					  
-				    </div>
-					
+			while($Betaal= $betaal->fetch_assoc())
+			{
+				echo "<div class='prijs'>".$Betaal['sum(prijs)']."</div>";
+				echo "<div class='betaal'>".$Betaal['naam']."</div>";
+				
+				
+				echo "<br />";
+				
+			
+			}
+			while($Betaal= $betaal->fetch_assoc())
+			{
+			
+			echo $Betaal['sum(prijs)'];
+			}
+			
+		?>
+		
+		
 				
 		
 		

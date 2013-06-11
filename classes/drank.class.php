@@ -62,5 +62,25 @@ class drankje {
 
 	}
 	
+	public function Wis() {
+
+		include_once('classes/Connection.php');
+
+
+		$sql = "DELETE FROM `drank` WHERE `drankje` = 
+				
+				'" . $link -> real_escape_string($this -> m_sNaam) . "';";
+
+	
+		if (!$link -> query($sql)) {
+			throw new Exception("Fout bij registratie");
+		}
+
+	}
+	
+	
+	
+	
+	
 }
 ?>
